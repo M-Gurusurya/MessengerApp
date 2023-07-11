@@ -6,6 +6,7 @@ interface MessagingService{
 }
 class SMSMessagingService implements MessagingService
 {
+    @Override
     public void sendMessage()
     {
         Scanner scanner=new Scanner(System.in);
@@ -28,6 +29,7 @@ class SMSMessagingService implements MessagingService
 class EmailMessagingService implements MessagingService
 {
     Scanner scanner=new Scanner(System.in);
+    @Override
     public void sendMessage()
     {
         System.out.println("enter email address");
@@ -48,6 +50,7 @@ class EmailMessagingService implements MessagingService
 }class WhatsAppMessagingService implements MessagingService
 {
     Scanner scanner=new Scanner(System.in);
+    @Override
     public void sendMessage()
     {
         System.out.println("Do you have whatsapp? if yes press '1' or press '2'");
